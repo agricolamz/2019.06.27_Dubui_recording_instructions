@@ -72,8 +72,10 @@ If everything went good now you have a new file and a TextGrid with all your fil
 
 ## What is the next?
 
-You can anotate the words:
+You can annotate the words:
 
 ![](annotation_example.png)
 
 It is better to annotate just borders and automatically fill it with a script (look at my [praat script](https://github.com/agricolamz/annotate_from_text_file_in_praat), I'll write a function for `lingfieldwork` that will do the same).
+
+Having this kind of annotation it is possible to use [this script](https://github.com/agricolamz/get_pitch_formants_duration) for extracting pitch, duration and formants.
