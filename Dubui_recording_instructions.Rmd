@@ -1,0 +1,48 @@
+---
+title: "Recording instructions for Margaux Dubuis"
+author: "G. Moroz"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+last verssion of this file: [online](), [offline folder]()
+
+## Packages
+
+First you need to install these packages:
+
+```{r}
+install.packages("readxl")
+devtools::install_github("agricolamz/lingfieldwork")
+```
+
+## Collecting stimuli
+
+First, you need to decide what do you want to record (selected forms, sentences, whatever) and list all stimuli in the file `stimuli.xlsx` with the following columns `stimuli`, `translation` (it is better not to use complicated symbols like ʰ etc.), and `comments`. Put the file in some folder (`path`), open RStudio, copy and run the following lines:
+
+```{r}
+setwd("...") # sets a path to your file, remmeber about slashes
+stimuli <- readxl::read_xlsx("stimuli.xlsx") # read from your file
+lingfieldwork::create_presentation(stimuli$stimuli, 
+                                   stimuli$translation, # optional
+                                   output = "html")
+```
+
+This code will create a `stimuli_prezi.html` for you. Each slide in the presentation contains a word that you expect and its translation.
+
+## Recording
+Record your stimuli. Use two recorders:
+
+1) cheap recorder for everything (it could be even your phone) and small settings (mp3, small bitrate)
+2) normal one with a good quality and settings (wav, with sample frequency around 40 kHz)
+
+Do have a notebook and a pencil: you need to record sociolinguistic information about speaker, numbers of recording that you need to through out, correct spelling of some words that this particular speaker pronounce in a strange way.
+
+## Rename your files
+As fast as you can, you need to rename your files. You need to create a separate folder for each speaker and put there all recordings from this session. If you have multiple sessions with the same speaker (lets treat one presentation as one session) create a separate folder for each session. Keep recordings from different recorders in a different folder.  Make a backup of all created recordings on the hard drive and computer and remove all recordings from recorder.
+
