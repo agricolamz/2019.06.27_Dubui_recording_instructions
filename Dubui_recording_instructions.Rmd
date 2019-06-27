@@ -78,4 +78,4 @@ You can annotate the words:
 
 It is better to annotate just borders and automatically fill it with a script (look at my [Praat script](https://github.com/agricolamz/annotate_from_text_file_in_praat), I'll write a function for `lingfieldwork` that will do the same).
 
-Having this kind of annotation it is possible to use [this Praat script](https://github.com/agricolamz/get_pitch_formants_duration) for extracting pitch, duration and formants.
+Having this kind of annotation it is possible to use [this Praat script](https://raw.githubusercontent.com/agricolamz/get_pitch_formants_duration/master/get_formants_duration.praat) for extracting pitch (see [some instructions](https://github.com/agricolamz/get_pitch_formants_duration)), duration and formants.
