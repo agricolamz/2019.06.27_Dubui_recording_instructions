@@ -57,6 +57,8 @@ lingfieldwork::rename_soundfiles(prefix = "...",
 
 By default this function creates a backup of your files. So check whether renaming succeed randomly listening some files. If everything went good delete the backup folder.
 
+
+
 ## Concatenate all files
 
 The next task that you want to do is to create automatically annotation for each word from multiple files (it is analogue of the "Concatenate recoverably" in Praat):
@@ -67,3 +69,11 @@ lingfieldwork::concatenate_soundfiles(filename = "all") # you could rename it wi
 ```
 
 If everything went good now you have a new file and a TextGrid with all your files.
+
+## What is the next?
+
+You can anotate the words:
+
+![](annotation_example.png)
+
+It is better to annotate just borders and automatically fill it with a script (look at my [praat script](https://github.com/agricolamz/annotate_from_text_file_in_praat), I'll write a function for `lingfieldwork` that will do the same).
