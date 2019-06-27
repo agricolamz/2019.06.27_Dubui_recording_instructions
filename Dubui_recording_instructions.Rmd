@@ -10,7 +10,7 @@ editor_options:
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-last verssion of this file: [online](), [offline folder]()
+last verssion of this file: [online](https://agricolamz.github.io/2019.06.27_Dubui_recording_instructions/Dubui_recording_instructions.html)
 
 ## Packages
 
@@ -45,4 +45,29 @@ Do have a notebook and a pencil: you need to record sociolinguistic information 
 
 ## Rename your files
 As fast as you can, you need to rename your files. You need to create a separate folder for each speaker and put there all recordings from this session. If you have multiple sessions with the same speaker (lets treat one presentation as one session) create a separate folder for each session. Keep recordings from different recorders in a different folder.  Make a backup of all created recordings on the hard drive and computer and remove all recordings from recorder.
+
+For renaming files you need to put all files into a folder (there should be no files other then wav). Double check the number of the files should be the same as the number of stimuli. In the prefix argument put all additional information such as date, code of the informant, gender and year of birth etc
+
+```{r}
+setwd("...") # sets a path to the folder with sounds
+lingfieldwork::rename_soundfiles(prefix = "...",
+                                 stimuli = stimuli$stimuli,
+                                 translations = stimuli$translation)
+```
+
+By default this function creates a backup of your files. So check whether renaming succeed randomly listening some files. If everything went good delete the backup folder.
+
+## Concatenate all files
+
+The next task that you want to do is to create automatically annotation for each word from multiple files (it is analogue of the "Concatenate recoverably" in Praat):
+
+```{r}
+setwd("...")  # sets a path to the folder with renamed sounds
+lingfieldwork::concatenate_soundfiles(filename = "all") # you could rename it with speakere code or something
+```
+
+
+```{r}
+
+```
 

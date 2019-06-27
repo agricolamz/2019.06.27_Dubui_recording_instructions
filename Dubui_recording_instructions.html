@@ -380,7 +380,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>last verssion of this file: <a href>online</a>, <a href>offline folder</a></p>
+<p>last verssion of this file: <a href="https://agricolamz.github.io/2019.06.27_Dubui_recording_instructions/Dubui_recording_instructions.html">online</a></p>
 <div id="packages" class="section level2">
 <h2>Packages</h2>
 <p>First you need to install these packages:</p>
@@ -409,6 +409,18 @@ lingfieldwork::create_presentation(stimuli$stimuli,
 <div id="rename-your-files" class="section level2">
 <h2>Rename your files</h2>
 <p>As fast as you can, you need to rename your files. You need to create a separate folder for each speaker and put there all recordings from this session. If you have multiple sessions with the same speaker (lets treat one presentation as one session) create a separate folder for each session. Keep recordings from different recorders in a different folder. Make a backup of all created recordings on the hard drive and computer and remove all recordings from recorder.</p>
+<p>For renaming files you need to put all files into a folder (there should be no files other then wav). Double check the number of the files should be the same as the number of stimuli. In the prefix argument put all additional information such as date, code of the informant, gender and year of birth etc</p>
+<pre class="r"><code>setwd(&quot;...&quot;) # sets a path to the folder with sounds
+lingfieldwork::rename_soundfiles(prefix = &quot;...&quot;,
+                                 stimuli = stimuli$stimuli,
+                                 translations = stimuli$translation)</code></pre>
+<p>By default this function creates a backup of your files. So check whether renaming succeed randomly listening some files. If everything went good delete the backup folder.</p>
+</div>
+<div id="concatenate-all-files" class="section level2">
+<h2>Concatenate all files</h2>
+<p>The next task that you want to do is to create automatically annotation for each word from multiple files (it is analogue of the “Concatenate recoverably” in Praat):</p>
+<pre class="r"><code>setwd(&quot;...&quot;)  # sets a path to the folder with renamed sounds
+lingfieldwork::concatenate_soundfiles(filename = &quot;all&quot;) # you could rename it with speakere code or something</code></pre>
 </div>
 
 
