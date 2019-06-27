@@ -66,8 +66,4 @@ setwd("...")  # sets a path to the folder with renamed sounds
 lingfieldwork::concatenate_soundfiles(filename = "all") # you could rename it with speakere code or something
 ```
 
-
-```{r}
-
-```
-
+If everything went good now you have a new file and a TextGrid with all your files.
